@@ -8,7 +8,8 @@ class Http {
       data: data,
       method: method,
       header: {
-        token: wx.getStorageSync('token'),
+        'content-type': 'application/json',
+        'token': wx.getStorageSync('token')
       },
     });
     return res.data; // res 是整个包, 包括 cookie, header, body => data, 应该把body返回, 也就是 res.data
