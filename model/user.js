@@ -11,6 +11,14 @@ class User
       }
     })
   }
+
+  static async init() {
+    return await Http.request({
+      url: 'wechat/index/init',
+      data: {}
+    })
+  }
+
 }
 
 export { User };

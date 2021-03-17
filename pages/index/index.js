@@ -1,9 +1,15 @@
 // index.js
+
+import { Http } from "../../utils/http"
+
+import { User } from "../../model/user";
+
 // 获取应用实例
 const app = getApp()
 
 Page({
   data: {
+    init: 'Hello World !!!!',
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -17,7 +23,19 @@ Page({
       url: '../logs/logs'
     })
   },
+
+  myinit: async function () {
+    let result = await User.init();
+    this.setData({
+      init: result,
+    })
+  },
+
+
   onLoad() {
+
+    console.log(this.data.init);
+
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true
