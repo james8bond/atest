@@ -1,0 +1,14 @@
+.container {
+  border: 1px dashed red;
+  box-sizing: border-box;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container .bond {
+  width: 100%;
+  background-color: green;
+}
