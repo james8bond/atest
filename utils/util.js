@@ -14,4 +14,11 @@ const promisic = function (func) {
   };
 };
 
-export { promisic }
+const cache = function (argc1, argc2) {
+  if (argc2 == null) {
+    return wx.getStorageSync(argc1)
+  } else {
+    wx.setStorageSync(argc1, argc2);
+  }
+};
+export { promisic, cache }
