@@ -1,4 +1,5 @@
 <view class="container">
   <text>{{hello}}</text>
   <button bind:tap="bond" class="bond">事件</button>
+  <button bind:tap="bond2" class="bond_">事件2</button>
 </view>
