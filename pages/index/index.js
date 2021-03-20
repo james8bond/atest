@@ -10,26 +10,17 @@ const app = getApp()
 Page({
   data: {
     hello: 'Hello World',
+    modalHidden: true,
   },
 
   onLoad() {},
 
   bond() {
-    let a = cache('name');
-    console.log(a);
+    wx.showModal({
+      title: 'Hello',
+    })
   },
 
-  bond2() {
-    cache('name', 'James');
-  },
-
-  james: async function () {
-    let result = await User.init()
-  },
-
-  jj: async function () {
-    let result = await User.init()
-  },
 
 
 
