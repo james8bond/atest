@@ -4,6 +4,7 @@ import { User } from "../../model/user";
 import { cache } from "../../utils/util";
 
 
+
 // 获取应用实例
 const app = getApp()
 
